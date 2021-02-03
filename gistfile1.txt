@@ -1,0 +1,10 @@
+public async Task<ReturnType> DoSomethingAndReturnSomeValAsync()
+{
+  DoSomething();
+  SomeType someObj = await DoSomethingElseAsync();
+  return new ReturnType(someObj);
+}
+
+private async Task<SomeType> DoSomethingElseAsync(){
+...
+}
